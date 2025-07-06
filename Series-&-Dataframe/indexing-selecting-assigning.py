@@ -7,6 +7,7 @@ reviews = pd.read_csv('Series-&-Dataframe/winemag-data_first150k.csv')
 print(reviews.country)  #just selecting column names
 print(reviews.price)
 
+
 #same thing also for:(If we have a Python dictionary, we can access its values using the indexing ([]) operator. We can do the same with columns in a DataFrame:)
 print(reviews['country'])
 print(reviews['price'])
@@ -17,6 +18,13 @@ print(reviews.region_1[5])
 
 #or we could also do this:
 print(reviews['country'][10])
-print(reviews['region_1'][10])
+print(reviews['region_1'][: 10])  #can explicitly print multiple values also!!!!
 
 
+
+#Indexing in pandas: (pandas has its own accessor operators, loc and iloc)
+print(reviews.iloc[0])  #Selecting the first row   (Both loc and iloc are row-first, column-second)
+
+#This means that it's marginally easier to retrieve rows, and marginally harder to get retrieve columns.
+# To get a column with iloc, we can do the following:
+print(reviews.iloc[:, 0]) #all rows then first column
