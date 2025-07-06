@@ -23,6 +23,7 @@ print(reviews['region_1'][: 10])  #can explicitly print multiple values also!!!!
 
 
 #Indexing in pandas: (pandas has its own accessor operators, loc and iloc)
+                    #indexing based selection:
 print(reviews.iloc[0])  #Selecting the first row   (Both loc and iloc are row-first, column-second)
 
 #This means that it's marginally easier to retrieve rows, and marginally harder to get retrieve columns.
@@ -35,3 +36,9 @@ print(reviews.iloc[[1,2,3,4,5], 5])
 
 #negative indexing:
 print(reviews.iloc[-5:])  #last 5 rows with all columns
+
+               #level based selection:
+print(reviews.loc[0, 'country'])
+print(reviews.loc[:, ['variety', 'winery', 'points']])
+
+print(reviews.iloc[:3, :])  #first 3 rows and all columns
