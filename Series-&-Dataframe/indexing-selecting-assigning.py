@@ -27,4 +27,11 @@ print(reviews.iloc[0])  #Selecting the first row   (Both loc and iloc are row-fi
 
 #This means that it's marginally easier to retrieve rows, and marginally harder to get retrieve columns.
 # To get a column with iloc, we can do the following:
-print(reviews.iloc[:, 0]) #all rows then first column
+print(reviews.iloc[:, 1]) #all rows then first column
+print(reviews.iloc[:3, 1])
+
+#we can pass list also:
+print(reviews.iloc[[1,2,3,4,5], 5])
+
+#negative indexing:
+print(reviews.iloc[-5:])  #last 5 rows with all columns
