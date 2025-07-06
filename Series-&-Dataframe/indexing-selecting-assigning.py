@@ -15,4 +15,8 @@ print(reviews['price'])
 print(reviews.country[0]) #specifically finding a single value of columns
 print(reviews.region_1[5])
 
+#or we could also do this:
+print(reviews['country'][10])
+print(reviews['region_1'][10])
+
 
