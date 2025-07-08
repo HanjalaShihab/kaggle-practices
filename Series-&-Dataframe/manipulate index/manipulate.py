@@ -45,4 +45,11 @@ print(reviews.loc[(reviews.country == 'US') | (reviews.price == 100)].head())
 #The first is isin. isin is lets you select data whose value "is in" a list of values.
 #          For example, here's how we can use it to select wines only from Italy or France:
 
-print(reviews.loc[reviews.country.isin(['US', 'Germany'])])
+print(reviews.loc[reviews.country.isin(['US', 'Germany'])])  #like what if there are multiple countries we want?
+
+print(reviews.loc[reviews.country.isin(['Germany', 'France'])])
+
+#The second is isnull (and its companion notnull). 
+# These methods let you highlight values which are (or are not) empty (NaN). 
+# For example, to filter out wines lacking a price tag in the dataset, here's what we would do:
+
