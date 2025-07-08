@@ -52,4 +52,8 @@ print(reviews.loc[reviews.country.isin(['Germany', 'France'])])
 #The second is isnull (and its companion notnull). 
 # These methods let you highlight values which are (or are not) empty (NaN). 
 # For example, to filter out wines lacking a price tag in the dataset, here's what we would do:
+print(reviews.loc[reviews.country.isnull()])
 
+print(reviews.dropna(inplace=True))  #clearing the null values from entire dataset
+
+print(reviews.loc[reviews.country.notnull()])
