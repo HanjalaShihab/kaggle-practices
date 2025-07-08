@@ -22,3 +22,15 @@ print(reviews.loc[reviews.country == "Italy"])
 print(reviews.iloc[0])
 
 
+                               #Conditional selection:
+print(reviews.country == "Italy")   #returns true for country Italy in every row
+
+
+#printing all the rows where country is Italy:
+print(reviews.loc[reviews.country == "Italy"])
+
+
+print(reviews.iloc[0])    #to see all the column names as it couldn't be seen with native accessors
+
+   #now multiple conditional selection:
+print(reviews.loc[(reviews.country == 'Italy') & (reviews.points > 80)])
