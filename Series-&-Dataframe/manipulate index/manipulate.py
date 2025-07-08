@@ -54,6 +54,6 @@ print(reviews.loc[reviews.country.isin(['Germany', 'France'])])
 # For example, to filter out wines lacking a price tag in the dataset, here's what we would do:
 print(reviews.loc[reviews.country.isnull()])
 
-print(reviews.dropna(inplace=True))  #clearing the null values from entire dataset
+print(reviews.dropna(inplace=True))  #clearing the null values from the entire dataset
 
 print(reviews.loc[reviews.country.notnull()])
