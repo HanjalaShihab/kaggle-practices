@@ -34,3 +34,7 @@ print(reviews.iloc[0])    #to see all the column names as it couldn't be seen wi
 
    #now multiple conditional selection:
 print(reviews.loc[(reviews.country == 'Italy') & (reviews.points > 80)])
+
+print(reviews.loc[reviews.price == 85].head())
+
+print(reviews.loc[(reviews.country == 'US') | (reviews.price == 100)].head())
