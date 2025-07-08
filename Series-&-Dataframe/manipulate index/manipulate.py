@@ -38,3 +38,11 @@ print(reviews.loc[(reviews.country == 'Italy') & (reviews.points > 80)])
 print(reviews.loc[reviews.price == 85].head())
 
 print(reviews.loc[(reviews.country == 'US') | (reviews.price == 100)].head())
+
+
+#Pandas comes with a few built-in conditional selectors, two of which we will highlight here.
+
+#The first is isin. isin is lets you select data whose value "is in" a list of values.
+#          For example, here's how we can use it to select wines only from Italy or France:
+
+print(reviews.loc[reviews.country.isin(['US', 'Germany'])])
