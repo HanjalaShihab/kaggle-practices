@@ -10,18 +10,6 @@ print(reviews.shape)
 x = reviews.set_index("title")
 print(x)
 
-
-                               #Conditional selection:
-print(reviews.country == "Italy")   #returns true for country Italy in every row
-
-
-#printing all the rows where country is Italy:
-print(reviews.loc[reviews.country == "Italy"])
-
-
-print(reviews.iloc[0])
-
-
                                #Conditional selection:
 print(reviews.country == "Italy")   #returns true for country Italy in every row
 
