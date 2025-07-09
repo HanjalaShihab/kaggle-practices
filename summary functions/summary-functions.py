@@ -18,7 +18,3 @@ print()
 #we can use mean(), median() and mode() funcitons:
 print(reviews.points.mean())
 print()
-
-
-Summary functions
-Pandas provides many simple "summary functions" (not an official name) which restructure the data in some useful way. For example, consider the describe() method:
