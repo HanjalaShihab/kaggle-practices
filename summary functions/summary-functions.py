@@ -22,8 +22,3 @@ print()
 
 Summary functions
 Pandas provides many simple "summary functions" (not an official name) which restructure the data in some useful way. For example, consider the describe() method:
-
-reviews.points.describe()
-count    129971.000000
-mean         88.447138
-             ...      
