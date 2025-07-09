@@ -13,3 +13,7 @@ print()
 print(reviews.price.describe())
 print()
 print(reviews.taster_twitter_handle.describe())
+print()
+
+#we can use mean(), median() and mode() funcitons:
+print(reviews.points.mean())
