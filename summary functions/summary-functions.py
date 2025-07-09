@@ -27,5 +27,3 @@ reviews.points.describe()
 count    129971.000000
 mean         88.447138
              ...      
-75%          91.000000
-max         100.000000
