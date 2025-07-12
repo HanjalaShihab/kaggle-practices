@@ -47,3 +47,9 @@ print(reviews.points - review_points_mean)
 
 
 print(reviews.country + " - " + reviews.region_1)
+
+#These operators are faster than map() or apply() because they use speed ups built into pandas. 
+# All of the standard Python operators (>, <, ==, and so on) work in this manner.
+
+#However, they are not as flexible as map() or apply(), which can do more advanced things, 
+# like applying conditional logic, which cannot be done with addition and subtraction alone.
