@@ -18,3 +18,7 @@ print()
 #we can use mean(), median() and mode() funcitons:
 print(reviews.points.mean())
 print()
+
+
+#To see a list of unique values we can use the unique() function:
+print(reviews.taster_name.unique())
