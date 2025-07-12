@@ -4,3 +4,15 @@ reviews = pd.read_csv('summary functions/winemag-data-130k-v2.csv')
 
 #A map is a term, borrowed from mathematics, for a function that takes 
  #one set of values and "maps" them to another set of values.
+
+ #In data science we often have a need for creating new 
+ # representations from existing data, or for transforming 
+ # data from the format it is in now to the format that we want it to be in later. 
+ # Maps are what handle this work
+
+x = lambda a : a + 10  #recalling lambda function of pys
+print(x(5))    
+print()
+
+
+#suppors
