@@ -35,3 +35,7 @@ def remean_points(row):
 
 reviews_remeaned = reviews.apply(remean_points, axis = 'columns')
 print(reviews_remeaned.points)
+
+
+#Note that map() and apply() return new, transformed Series and DataFrames, respectively. 
+#They don't modify the original data they're called on. 
