@@ -39,3 +39,11 @@ print(reviews_remeaned.points)
 
 #Note that map() and apply() return new, transformed Series and DataFrames, respectively. 
 #They don't modify the original data they're called on. 
+
+#Pandas provides many common mapping operations as built-ins. For example, here's a faster way of remeaning our points column:
+
+review_points_mean = reviews.points.mean()
+print(reviews.points - review_points_mean)
+
+
+print(reviews.country + " - " + reviews.region_1)
