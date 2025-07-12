@@ -21,6 +21,9 @@ review_points_mean = reviews.points.mean()
 print(reviews.points.map(lambda p : p - review_points_mean))
 print()
 
+print(reviews.points.head())  # checking if the dataframe has changed for points column
+print()
+
 #in the above example refers to: (every value of point column - point column mean)
 
    # apply() function is the equivalent method if we want to transform a whole
@@ -30,4 +33,5 @@ def remean_points(row):
     row.points = row.points - review_points_mean
     return row
 
-reviews.apply(remean_points, axis = 'columns')
+reviews_remeaned = reviews.apply(remean_points, axis = 'columns')
+print(reviews_remeaned.points)
