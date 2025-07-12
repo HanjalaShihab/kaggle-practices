@@ -15,4 +15,7 @@ print(x(5))
 print()
 
 
-#suppors
+#suppose that we want to remean the scores the wines received to 0:
+
+review_points_mean = reviews.points.mean()
+print(reviews.points.map(lambda p : p - review_points_mean))
