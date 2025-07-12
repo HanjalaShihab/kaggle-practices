@@ -22,3 +22,7 @@ print()
 
 #To see a list of unique values we can use the unique() function:
 print(reviews.taster_name.unique())
+print()
+
+#To see a list of unique values and how often they occured:
+print(reviews.taster_name.value_counts())
