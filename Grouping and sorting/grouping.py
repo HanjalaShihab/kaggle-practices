@@ -20,5 +20,9 @@ print(reviews.points.value_counts())
 print()
 
   #but we also can do:
-x = reviews.groupby('points')['points'].count()
+x = reviews.groupby('points')['points'].count()  #sorts the data also
 print(x)
+
+
+y  = reviews.groupby('points')['price'].min()
+print(y)
