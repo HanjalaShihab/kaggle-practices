@@ -34,3 +34,7 @@ print("-------------------")
   #this line could also be done by this-
 z = reviews.groupby('winery')['title'].nth(0)
 print(z)
+print("--------------------")
+#and
+z = reviews.groupby('winery')['title'].agg('first')
+print(z)
