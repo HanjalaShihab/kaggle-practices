@@ -2,4 +2,12 @@
 
 import pandas as pd
 
-reviews = pd.read_csv('Series-&-Dataframe/manipulate index/winemag-data-130k-v2.csv')
+data = {
+    "store": ['A', 'B', 'A', 'B', 'A', 'B'],
+    "sales": [100, 200, 150, 300, 120, 250]
+}
+
+df = pd.DataFrame(data)
+
+grouped = df.groupby('store')['sales'].sum()
+print(grouped)
