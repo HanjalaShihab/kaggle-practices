@@ -38,6 +38,8 @@ print("--------------------")
 #and
 z = reviews.groupby('winery')['title'].agg('first')
 print(z)
+print("------------------")
 
 # can also group by more than one column. For an example,
 #  here's how we would pick out the best wine by country and province:
+data = reviews.groupby(['country', 'province']).apply(lambda a : a.loc[a.points.idxmax()])
