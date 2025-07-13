@@ -46,4 +46,5 @@ data = reviews.groupby(['country', 'province']).apply(lambda a : a.loc[a.points.
 print(data)
 print("--------------")
 
-data = reviews.groupby(['country','province']).apply(lambda df : df.loc[df.price.idxmax()])
+NaNRemoved = reviews.dropna(subset=['price'])
+data = NaNRemoved.groupby(['country','province']).apply(lambda df : df.loc[df.price.idxmax()])
