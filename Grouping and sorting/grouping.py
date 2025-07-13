@@ -43,3 +43,7 @@ print("------------------")
 # can also group by more than one column. For an example,
 #  here's how we would pick out the best wine by country and province:
 data = reviews.groupby(['country', 'province']).apply(lambda a : a.loc[a.points.idxmax()])
+print(data)
+print("--------------")
+
+data = reviews.groupby(['country','province']).apply(lambda df : df.loc[df.price.idxmax()])
