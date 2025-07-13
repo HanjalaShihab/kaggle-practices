@@ -26,3 +26,11 @@ print(x)
 
 y  = reviews.groupby('points')['price'].min()
 print(y)
+
+ ##***
+z = reviews.groupby('winery').apply(lambda a : a.title.iloc[0])  #selects the first title for each group
+print(z)
+print("-------------------")
+  #this line could also be done by this-
+z = reviews.groupby('winery')['title'].nth(0)
+print(z)
