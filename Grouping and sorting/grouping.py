@@ -32,9 +32,12 @@ z = reviews.groupby('winery').apply(lambda a : a.title.iloc[0])  #selects the fi
 print(z)
 print("-------------------")
   #this line could also be done by this-
-z = reviews.groupby('winery')['title'].nth(0)
+z = reviews.groupby('winery')['title'].nth(0)  #this is different then the other two
 print(z)
 print("--------------------")
 #and
 z = reviews.groupby('winery')['title'].agg('first')
 print(z)
+
+# can also group by more than one column. For an example,
+#  here's how we would pick out the best wine by country and province:
