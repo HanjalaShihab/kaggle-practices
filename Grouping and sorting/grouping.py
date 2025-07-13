@@ -11,3 +11,14 @@ df = pd.DataFrame(data)
 
 grouped = df.groupby('store')['sales'].sum()
 print(grouped)
+
+
+reviews = pd.read_csv('Series-&-Dataframe/manipulate index/winemag-data-130k-v2.csv')
+
+#we can use:
+print(reviews.points.value_counts())
+print()
+
+  #but we also can do:
+x = reviews.groupby('points')['points'].count()
+print(x)
