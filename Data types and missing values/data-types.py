@@ -19,3 +19,9 @@ print("-------------------")
 # a dataframe or series index has it's own dtype too:
 print(reviews.index.dtype)
 print("-------------------")
+
+
+#recalling:
+print(reviews.country.isnull())  #will return the country column only(True, false)
+#but to retrive the rows where country is not given:
+print(reviews.loc[reviews['country'].isnull()])
