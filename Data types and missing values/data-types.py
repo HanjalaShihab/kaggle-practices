@@ -8,3 +8,14 @@ print("-------------------")
 
 print(reviews.dtypes)
 print("-------------------")
+
+
+#It's possible to convert a column of one type into another wherever such a conversion makes sense by using the astype() function.
+x = reviews.points.astype('float64')
+print(x)
+print("-------------------")
+
+
+# a dataframe or series index has it's own dtype too:
+print(reviews.index.dtype)
+print("-------------------")
