@@ -61,3 +61,14 @@ print("---------------")
 countries_reviewed = reviews.groupby(['country', 'province']).description.agg([len])
 print(countries_reviewed)
 print("---------------")
+
+mi = countries_reviewed.index
+print(type(mi))     #checking if the dataframe is multi-index dataframe or not
+print("---------------")
+
+
+#Multi-indices have several methods for dealing with their tiered structure which are absent for single-level indices. 
+# They also require two levels of labels to retrieve a value. 
+x = countries_reviewed.reset_index()
+print(x)
+print(type(x.index))
