@@ -48,3 +48,7 @@ print("--------------")
 
 NaNRemoved = reviews.dropna(subset=['price'])
 data = NaNRemoved.groupby(['country','province']).apply(lambda df : df.loc[df.price.idxmax()])
+
+#another gorupby() method is agg()  which let us run a bunch of different functions 
+ #on the DataFrame simultaneously
+print(reviews.groupby('country')['price'].agg([len, min, max]))
