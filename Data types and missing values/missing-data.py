@@ -17,4 +17,17 @@ print("-------------------")
 
 
 #Replacing missing values:
-z = reviews.region_2.fillna("Unknown")
+reviews.region_2.fillna("Unknown", inplace=True)   #this is not a good practice for using inplace parameter
+print(reviews['region_2'])
+print("-------------------")
+
+
+#the good practice for replacing values for the above example is:
+reviews.fillna({'region_2': 'Hanjala'}, inplace= True)  #This won't override the "Unknown as they are already filled"
+print(reviews['region_2'])
+print("-------------------")
+
+
+#We can replace the "Unknowns":
+reviews['region_2'] =reviews['region_2'].replace("Unknown", "Hanjala")
+print(reviews['region_2'])
