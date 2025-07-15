@@ -48,7 +48,16 @@ print("--------------")
 
 NaNRemoved = reviews.dropna(subset=['price'])
 data = NaNRemoved.groupby(['country','province']).apply(lambda df : df.loc[df.price.idxmax()])
+print("---------------")
 
 #another gorupby() method is agg()  which let us run a bunch of different functions 
  #on the DataFrame simultaneously
 print(reviews.groupby('country')['price'].agg([len, min, max]))
+print("---------------")
+
+
+#Multi-index:
+# A mutli-index differs from a regular index in that it has multiple levels.
+countries_reviewed = reviews.groupby(['country', 'province']).description.agg([len])
+print(countries_reviewed)
+print("---------------")
