@@ -7,3 +7,6 @@ import pandas as pd
 first_one = pd.read_csv("Series-&-Dataframe/winemag-data_first150k.csv")
 second_one = pd.read_csv("Series-&-Dataframe/manipulate index/winemag-data-130k-v2.csv")
 
+x = pd.concat([first_one, second_one])
+
+print(x.columns)
