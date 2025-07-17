@@ -6,3 +6,8 @@ reviews = pd.read_csv('Series-&-Dataframe/manipulate index/winemag-data-130k-v2.
 x = reviews.rename(columns= {'points': 'score'})
 print(reviews.columns)
 print(x.columns)  #this will show the changed column points to score
+
+
+#renaming another column:
+y = reviews.rename(columns= {'region_1': 'first_region', 'region_2': 'second_region'})
+print(y.columns)
